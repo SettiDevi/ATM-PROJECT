@@ -1,0 +1,40 @@
+import sys
+class login:
+    def login(self):
+        ATMbalance=1000000
+        print("The ATM balance is",ATMbalance)
+        pin=1234
+        password=1212
+        c=0
+        a=0
+        while(True):
+            u_pin=int(input("Enter pin:"))
+            if u_pin==pin:
+                while True:
+                    u_password=int(input("Enter password:"))
+                    if u_password==password:
+                        print("Login successfully")
+                        break
+                    else:
+                        print("Try again")
+                        c=c+1
+                        if c==3:
+                            print("This is the last chance")
+                        if(c>3):
+                            print("Exceeding authentication limit,please visit your bank to use services")
+                            sys.exit()
+                break
+            else:
+                a=a+1
+                print("Incorrect")
+                if a==3:
+                    print("This is the last chance")
+                if(a>3):
+                    print("Exceeding authentication limit,please visit your bank to use services")
+                    break
+                
+                    
+            
+
+obj=login()
+obj.login()
