@@ -1,0 +1,17 @@
+class atm:
+    def atm(self):
+        print("Welcome to ATM")
+        print("To use services insert your ATMcard into the ATM Machine")
+        print("Choose 1 in 3 options 1.Rupay 2.Visa 3.Mastercard")
+        n=int(input("Enter the no:"))
+        if n==1:
+            print("Authenticate yourself")
+        elif n==2:
+            print("Authenticate yourself")
+        elif n==3:
+            print("Authenticate yourself")
+        else:
+            print("Choose the service in between 1 to 3")
+    
+obj1=atm()
+obj1.atm()
