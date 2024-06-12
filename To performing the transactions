@@ -1,0 +1,60 @@
+import sys
+class transactions:
+    def transactions(self):
+        while True:
+            balance=10000
+            ATMbalance=1000000
+            
+            print("what you would like to perform")
+            print("""1.Deposit
+2.Withdraw
+3.Checkbalance
+4.Changepinorpassword
+5.Exit
+                     """)
+            print("choose the number from 1 to 5 to perform tranasactions")
+            option=int(input("enter your option:"))
+            if option==1:
+                deposit_amount=int(input("enter the amount you would like to deposit:"))
+                total_balance=balance+deposit_amount
+                ATMbalance=ATMbalance+deposit_amount
+                print("Your money successfully credited into your account")
+                print("Your account balance is",total_balance)
+                print("Remaining ATM balance is",ATMbalance)
+                print("Thankyou for using the services")
+                print("_____________________________________________________________")
+                break
+            if option==2:
+                while True:
+                    withdraw_amount=int(input("enter the amount you would like to withdraw:"))
+                    if withdraw_amount>balance:
+                        print("insufficient amount enter valid amount")
+                    else:
+                        total_balance= balance-withdraw_amount
+                        ATMbalance=ATMbalance-withdraw_amount
+                        print("Your money is successfully debited from your account")
+                        print("Your account balance is",total_balance)
+                        print("Remaining ATM balance is",ATMbalance)
+                        print("Thankyou for using the services")
+                        print("_____________________________________________________________")
+                        break
+                break
+            if option==3:
+                    print("Your account balance is",balance)
+                    print("Checking balance is done successfully")
+                    print("Thankyou for using the services")
+                    print("_____________________________________________________________")
+                    break
+                
+            if option==4:
+                new_pin=int(input("enter new pin:"))
+                new_password=int(input("enter new password:"))
+                print("your details successfully updated")
+                break
+            if option==5:
+                print("you are successfully exited.")
+                sys.exit()
+            if option>5 or option<0:
+                print("enter a valid option in between 1 to 4 to use atm services:")
+o=transactions()
+o.transactions()
